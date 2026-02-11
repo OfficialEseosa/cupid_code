@@ -49,6 +49,16 @@ class _ValentineHomeState extends State<ValentineHome> {
               ),
             ),
           ),
+          Container(
+            width: 200,
+            height: 200,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/valHeart.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          )
         ],
       ),
     );
