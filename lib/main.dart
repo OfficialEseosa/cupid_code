@@ -28,6 +28,7 @@ class _ValentineHomeState extends State<ValentineHome>
     with SingleTickerProviderStateMixin {
   String selectedEmoji = 'Lovestruck Heart';
   final List<Offset> trailPoints = [];
+  static const _maxTrail = 50;
 
   late AnimationController controller;
 
@@ -53,9 +54,7 @@ class _ValentineHomeState extends State<ValentineHome>
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-              'assets/images/rose_valentine_wallpaper.jpg',
-            ),
+            image: AssetImage('assets/images/rose_valentine_wallpaper.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -78,7 +77,7 @@ class _ValentineHomeState extends State<ValentineHome>
                 onPanUpdate: (details) {
                   setState(() {
                     trailPoints.add(details.localPosition);
-                    if (trailPoints.length > 80) {
+                    if (trailPoints.length > _maxTrail) {
                       trailPoints.removeAt(0);
                     }
                   });
@@ -96,6 +95,16 @@ class _ValentineHomeState extends State<ValentineHome>
                     );
                   },
                 ),
+              ),
+            ),
+            // "Will You Be My Valentine?" image
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Image.asset(
+                'assets/images/valHeart.png',
+                width: 200,
+                fit: BoxFit.contain,
+                color: Colors.white,
               ),
             ),
           ],
@@ -137,7 +146,7 @@ class HeartPainter extends CustomPainter {
       ..cubicTo(-40, -90, -80, -10, 0, 40)
       ..close();
 
-    /// 💖 LOVE TRAIL / AURA (VERY VISIBLE)
+    /// 💖 LOVE TRAIL / AURA
     canvas.drawPath(
       heartPath,
       Paint()
@@ -155,7 +164,6 @@ class HeartPainter extends CustomPainter {
       ).createShader(
         Rect.fromCircle(center: Offset.zero, radius: 90),
       );
-
     canvas.drawPath(heartPath, fillPaint);
 
     /// ✨ SPARKLES

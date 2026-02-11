@@ -56,3 +56,4 @@ flutter:
   # Add this section carefully!
   assets:
     - assets/images/rose_valentine_wallpaper.jpg
+    - assets/images/valHeart.png
