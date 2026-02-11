@@ -1,16 +1,10 @@
-# cupid_code
+# Cupid's Canvas 💘
 
-A new Flutter project.
+A Valentine's Day Flutter app that lets you draw heart trails across the screen with a swipe of your finger.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Heart Trail Drawing** — Drag anywhere on screen to leave a trail of animated hearts.
+- **Emoji Picker** — Switch between Lovestruck Heart (😍) and Party Heart (🥳) styles.
+- **Romantic Enhancements** — Gradient-filled hearts, glowing love-trail aura, animated sparkles, and a party hat with confetti.
+- **Valentine Message** — A "Will You Be My Valentine?" image at the bottom of the screen.
